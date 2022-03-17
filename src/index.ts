@@ -17,8 +17,7 @@ const app = new App({
 });
 
 const pd = api({ token: process.env.PD_TOKEN })
-const port = 3000
-app.start(process.env.PORT || port);
+app.start(process.env.PORT || 3000);
 app.message(async ({ say, message, client }) => {
     const queries = qs.stringify({
         since: (new Date()).toUTCString(), 
