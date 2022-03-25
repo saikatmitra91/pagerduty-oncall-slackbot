@@ -45,7 +45,7 @@ app.message(async ({ say, message, client }) => {
                 const { user: slackUser } = resp
                 const { id: slackUserId } = slackUser as User
                 say({
-                    text: `<@${slackUserId}>`,
+                    text: `<@${slackUserId}> :point_up:`,
                     thread_ts: (message as Message).thread_ts
                 })
             }
